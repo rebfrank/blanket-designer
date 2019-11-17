@@ -1,5 +1,6 @@
 .blanket {
   table-layout: fixed;
+  margin: 10px;
 }
 
 .blanket td {
@@ -11,6 +12,20 @@
   height: 10px;
   width: 10px;
   padding: 10px;
+  cursor: pointer;
+}
+
+.schemeSelector th {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.schemeSelector {
+    table-layout: fixed;
+    margin: 10px;
+    margin-bottom: 50px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
 }
 
 h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 48px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
@@ -20,9 +35,4 @@ h2 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 24px; font-we
 p, th {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-}
-
-.blanket, .schemeSelector {
-    margin: 10px;
-    margin-bottom: 50px;
 }
