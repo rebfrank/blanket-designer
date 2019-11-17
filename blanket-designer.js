@@ -12,7 +12,7 @@ const colorSchemes = {
 function makeQuiltArray(colorScheme) {
     var quiltArray = [];
     for (var row = 0; row < colorScheme.length; row++) {
-        quiltArray.push(colorScheme);
+        quiltArray.push(colorScheme.slice(row, colorScheme.length).concat(colorScheme.slice(0,row)));
     }
     return quiltArray;
 }
