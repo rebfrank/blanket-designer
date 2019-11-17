@@ -12,8 +12,8 @@ function makeQuiltArray(colorScheme) {
     return quiltArray;
 }
 
-function makeTableHTML(colorArray) {
-    var tableHTML = "<table>";
+function makeBlanketTableHTML(colorArray) {
+    var tableHTML = "<table class=blanket>";
     // create columns
     for (var col = 0; col < colorArray[0].length; col++) {
   	    tableHTML += "<col>";
@@ -30,17 +30,28 @@ function makeTableHTML(colorArray) {
     return tableHTML;
 }
 
-function makeDropdownList(list) {
-    return list.map(item => `<option value="${item}">${item}</option>`).join("");
+function schemeSelectedHandler(selectedRow) {
+    drawBlanket(selectedRow.dataset.scheme.split(','));
 }
 
-function drawBlanket(schemeName) {
-    document.getElementById("quilt").innerHTML = makeTableHTML(makeQuiltArray(colorSchemes[schemeName]));
+function makeSchemeSelectorHTML() {
+    var tableHTML = "<table class=schemeSelector>";
+    tableHTML += Object.keys(colorSchemes).map(schemeName => {
+        var colors = colorSchemes[schemeName];
+        var trString = `<tr data-scheme="${colors}" onclick="schemeSelectedHandler(this)">`;
+        trString += colors.map(color => `<td bgcolor="${color}"/>`).join("");
+        trString += `<th>${schemeName}</th>`;
+        trString += "</tr>";
+        return trString;
+    }).join("");
+    tableHTML += "</table>";
+    return tableHTML;
+}
+
+function drawBlanket(scheme) {
+    document.getElementById("blanketContainer").innerHTML = makeBlanketTableHTML(makeQuiltArray(scheme));
 }
 
 const schemeSelectorElement = document.getElementById("schemeSelector");
-schemeSelectorElement.innerHTML = makeDropdownList(Object.keys(colorSchemes));
-schemeSelectorElement.addEventListener('change', (event) => {
-    drawBlanket(event.target.value);
-});
-drawBlanket("Scheme 1");
+schemeSelectorElement.innerHTML = makeSchemeSelectorHTML();
+drawBlanket(colorSchemes["Scheme 1"]);
