@@ -1,0 +1,12 @@
+table {
+  background-color: #ccc;
+  table-layout: fixed;
+}
+
+col {
+  width: 75px;
+}
+
+tr {
+  height: 75px;
+}
