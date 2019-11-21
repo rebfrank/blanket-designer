@@ -1,13 +1,22 @@
 const colorSchemes = {
     "Scheme 1": [ "#555358", "#C6CA53", "#678C69", "#C9DCB3", "#F1F5F2" ],
-    "Scheme 2": [ "#2A4F2B", "#B098A4", "#678C69", "#DBD9DB", "#E5EBEA" ],
-    "Scheme 3": [ "#CFF09E", "#A8DBA8", "#678C69", "#72B5B5", "#0B486B" ],
-    "Scheme 4": [ "#FE4365", "#FC9D9A", "#678C69", "#C8C8A9", "#F9CDAD" ],
+    "Scheme 2": [ "#2A4F2B", "#678C69", "#B098A4", "#DBD9DB", "#E5EBEA" ],
+    "Scheme 3": [ "#CFF09E", "#A8DBA8", "#678C69", "#0B486B", "#72B5B5" ],
+    "Scheme 4": [ "#FE4365", "#FC9D9A", "#F9CDAD", "#C8C8A9", "#678C69" ],
     "Scheme 5": [ "#FFED90", "#A8D46F", "#678C69", "#3C3251", "#341139" ],
-    "Scheme 6": [ "#D4E6B5", "#AFC97E", "#678C69", "#E2D686", "#FFDF64" ],
-    "Scheme 7": [ "#F4FDD9", "#E4FFE1", "#678C69", "#FFE8C2", "#FFB06B" ],
-    "Scheme 8": [ "#C5E063", "#E3E9C2", "#678C69", "#F9FBB2", "#A5ABAF" ],
+    "Scheme 6": [ "#678C69", "#AFC97E", "#D4E6B5", "#E2D686", "#FFDF64" ],
+    "Scheme 7": [ "#678C69", "#E4FFE1", "#F4FDD9", "#FFE8C2", "#FFB06B" ],
+    "Scheme 8": [ "#678C69", "#C5E063", "#F9FBB2", "#E3E9C2", "#A5ABAF" ],
 };
+
+const squaresFromGrandma = {
+    "Light Green": 13,
+    "Dark Green": 4,
+    "Dark Brown": 4,
+    "Light Brown": 5,
+    "Beige": 1,
+    "Red": 1
+}
 
 const patterns = {
     "Diagonal Symmetric": [
